@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --product-gradient: linear-gradient(135deg, #FFB74D 0%, #FFA726 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--product-gradient);
+  transition: background 0.8s ease;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  
+  /* Hide scrollbars */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection Color */
+::selection {
+  background-color: #f97316; /* orange-500 */
+  color: #ffffff;
+}
