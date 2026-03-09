@@ -1,31 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --product-gradient: linear-gradient(135deg, #FFB74D 0%, #FFA726 100%);
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #f97316;
+  --primary-foreground: #ffffff;
+  --secondary: #1c1c1e;
+  --secondary-foreground: #ededed;
+  --accent: #1c1c1e;
+  --accent-foreground: #ededed;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.15);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #f97316;
+  --product-gradient: linear-gradient(135deg, #FFB74D 0%, #FFA726 100%);
 }
 
 body {
   color: var(--foreground);
-  background: var(--product-gradient);
+  background: var(--background);
   transition: background 0.8s ease;
   margin: 0;
   padding: 0;
   font-family: inherit;
-  
+
   /* Hide scrollbars */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 body::-webkit-scrollbar {
@@ -34,6 +54,7 @@ body::-webkit-scrollbar {
 
 /* Selection Color */
 ::selection {
-  background-color: #f97316; /* orange-500 */
+  background-color: #f97316;
+  /* orange-500 */
   color: #ffffff;
 }
